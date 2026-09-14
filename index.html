@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-slate-200 m-5">
+    <div class="max-w-md mx-auto bg-white overflow-hidden shadow-2xl border border-gray-400 rounded-xl">
+        <div class="bg-black py-5 flex justify-between px-5">
+            <a href="index.html" class="text-white tracking-wider underline font-semibold hover:text-amber-300 transition-all ease-linear duration-200">Todo App</a>
+            <a class="hover:text-amber-300 text-black transition-all ease-linear duration-200 font-semibold tracking-wide text-xs items-center flex" href="https://github.com/gurshabad-ae" target="_blank">fandom.github</a>
+        </div>
+        <div class="pt-6 pb-8 px-5 ">
+            <form action="" id="form-todo">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input id="input-todo" class="flex-1 border border-gray-400 outline-none focus:border-black rounded-lg py-2 px-3" type="text"
+                        placeholder="Enter Task Description...">
+                    <div id="submit-div" class="flex flex-col gap-2">
+                        <button id="btn-form" class="py-2 rounded-lg text-white cursor-pointer px-5 font-semibold bg-black">Add</button>
+                        <p id="cancel-edit" class="text-xs underline text-gray-500 hover:text-gray-800 transition-all ease-linear duration-200 hidden cursor-pointer tracking-wide">Cancel Editing...</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="py-3 px-1 flex justify-between text-sm font-semibold border-b text-gray-600 border-gray-500 mx-4">
+            <p id="tasks-number">Tasks (0)</p>
+            <p id="completed-tasks">Completed (0)</p>
+        </div>
+
+        <div class="py-8 px-5">
+            <ul id="todo-list" class="flex flex-col gap-3">
+                <!-- <li class="flex justify-between py-3 px-5 border border-gray-300 rounded-xl">
+                    <div class="flex gap-2">
+                        <input type="checkbox">
+                        <p>Go To GYM</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <p>Edit</p>
+                        <p>Delete</p>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
