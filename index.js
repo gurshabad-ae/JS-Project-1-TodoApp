@@ -1,5 +1,12 @@
 let arrTodos = [];
 
+// localStorage.setItem("Task", JSON.stringify(arrTodos));
+const savedTodos = localStorage.getItem("Task");
+if (savedTodos) {
+    arrTodos = JSON.parse(savedTodos);
+}
+
+
 const formTodo = document.querySelector("#form-todo");
 const inputTodo = document.querySelector("#input-todo");
 const todoList = document.querySelector("#todo-list");
@@ -35,7 +42,8 @@ formTodo.addEventListener("submit", (e) => {
             content: inputValue,
             isCompleted: false
         }
-        arrTodos.push(newTodos)
+        arrTodos.push(newTodos);
+        localStorage.setItem("Task", JSON.stringify(arrTodos));
 
     }
     cancelEdit();
@@ -91,6 +99,7 @@ function dltTodo(e, id) {
             return todo;
         }
     });
+    localStorage.setItem("Task", JSON.stringify(arrTodos));
     renderTodo();
 };
 
@@ -104,6 +113,7 @@ function toggleCheck(id) {
         }
         return todo;
     })
+    localStorage.setItem("Task", JSON.stringify(arrTodos));
     renderTodo();
 };
 
